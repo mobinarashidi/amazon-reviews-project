@@ -7,7 +7,7 @@
 /dataSources/
 /dataSources.local.xml
 # --- Data (large files, never commit) ---
-data/
+data/raw/
 *.gz
 *.zip
 *.csv
