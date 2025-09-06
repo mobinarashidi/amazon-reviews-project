@@ -1,0 +1,20 @@
+{
+  "index_patterns": ["amazon-music-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "productId": { "type": "keyword" },
+        "userId": { "type": "keyword" },
+        "score": { "type": "float" },
+        "helpfulness": { "type": "float" },
+        "time": { "type": "long" },
+        "summary_text": { "type": "text" },
+        "review_text": { "type": "text" }
+      }
+    }
+  }
+}
