@@ -1,0 +1,14 @@
+{
+  "size": 0,
+  "query": {
+    "range": { "helpfulness": { "gt": 0.75 } }
+  },
+  "aggs": {
+    "top_terms": {
+      "significant_text": {
+        "field": "review_text",
+        "size": 10
+      }
+    }
+  }
+}

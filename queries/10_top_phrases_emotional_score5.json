@@ -1,0 +1,21 @@
+{
+  "size": 0,
+  "query": {
+    "bool": {
+      "filter": [
+        { "term": { "score": 5 } }
+      ],
+      "must": [
+        { "match": { "review_text": "emotional" } }
+      ]
+    }
+  },
+  "aggs": {
+    "top_phrases": {
+      "significant_text": {
+        "field": "review_text.shingles",
+        "size": 10
+      }
+    }
+  }
+}

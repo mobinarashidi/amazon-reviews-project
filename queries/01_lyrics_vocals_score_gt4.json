@@ -1,0 +1,11 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "range": { "score": { "gt": 4 } } },
+        { "match": { "review_text": "lyrics" } },
+        { "match": { "review_text": "vocals" } }
+      ]
+    }
+  }
+}
