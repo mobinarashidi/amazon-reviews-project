@@ -1,0 +1,15 @@
+{
+  "size": 0,
+  "query": {
+    "match_phrase": { "review_text": "feel good" }
+  },
+  "aggs": {
+    "top_products": {
+      "terms": {
+        "field": "productId.keyword",
+        "size": 10,
+        "order": { "_count": "desc" }
+      }
+    }
+  }
+}

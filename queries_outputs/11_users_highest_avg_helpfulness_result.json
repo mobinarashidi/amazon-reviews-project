@@ -1,0 +1,96 @@
+{
+  "took": 2881,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "users": {
+      "doc_count_error_upper_bound": -1,
+      "sum_other_doc_count": 6171516,
+      "buckets": [
+        {
+          "key": "A2E8SUMYNZID0W",
+          "doc_count": 1,
+          "avg_help": {
+            "value": 2.5
+          }
+        },
+        {
+          "key": "A2N907WF7QCUX2",
+          "doc_count": 1,
+          "avg_help": {
+            "value": 2.0
+          }
+        },
+        {
+          "key": "AKURIEO6PHTDY",
+          "doc_count": 1,
+          "avg_help": {
+            "value": 2.0
+          }
+        },
+        {
+          "key": "A26QHGZ5AYSTU5",
+          "doc_count": 7,
+          "avg_help": {
+            "value": 1.9768907566155707
+          }
+        },
+        {
+          "key": "A24LD3TV79647Q",
+          "doc_count": 10,
+          "avg_help": {
+            "value": 1.5100000023841857
+          }
+        },
+        {
+          "key": "A3BNZ14Z8Y70A1",
+          "doc_count": 5,
+          "avg_help": {
+            "value": 1.5
+          }
+        },
+        {
+          "key": "A01250631WHLXSISVLHPA",
+          "doc_count": 1,
+          "avg_help": {
+            "value": 1.0
+          }
+        },
+        {
+          "key": "A0177372278RKS3W9AJ4Z",
+          "doc_count": 1,
+          "avg_help": {
+            "value": 1.0
+          }
+        },
+        {
+          "key": "A023023334QO4HEJJIFCP",
+          "doc_count": 1,
+          "avg_help": {
+            "value": 1.0
+          }
+        },
+        {
+          "key": "A02420691SQ5LNP7BRNC6",
+          "doc_count": 1,
+          "avg_help": {
+            "value": 1.0
+          }
+        }
+      ]
+    }
+  }
+}

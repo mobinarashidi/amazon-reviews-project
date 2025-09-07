@@ -1,0 +1,10 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "review_text": "positive" } },
+        { "match": { "summary_text": "inspiring" } }
+      ]
+    }
+  }
+}

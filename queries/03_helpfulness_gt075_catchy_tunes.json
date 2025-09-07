@@ -1,0 +1,12 @@
+{
+  "query": {
+    "bool": {
+      "filter": [
+        { "range": { "helpfulness": { "gt": 0.75 } } }
+      ],
+      "must": [
+        { "match_phrase": { "review_text": "catchy tunes" } }
+      ]
+    }
+  }
+}

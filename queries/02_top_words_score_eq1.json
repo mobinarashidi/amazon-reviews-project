@@ -1,0 +1,14 @@
+{
+  "size": 0,
+  "query": {
+    "term": { "score": 1 }
+  },
+  "aggs": {
+    "top_terms": {
+      "significant_text": {
+        "field": "review_text",
+        "size": 10
+      }
+    }
+  }
+}

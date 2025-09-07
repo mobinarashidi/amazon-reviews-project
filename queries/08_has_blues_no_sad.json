@@ -1,0 +1,12 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "review_text": "blues" } }
+      ],
+      "must_not": [
+        { "match": { "review_text": "sad" } }
+      ]
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "took": 20,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 4303,
+      "relation": "eq"
+    },
+    "max_score": 10.626207,
+    "hits": [
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000069V2J::unknown::1034726400",
+        "_score": 10.626207,
+        "_source": {
+          "productId": "B000069V2J",
+          "title": "Another Day at School",
+          "price": 12.48,
+          "userId": "unknown",
+          "profileName": "unknown",
+          "helpfulness_raw": "1/1",
+          "score": 5.0,
+          "time": 1034726400,
+          "summary_text": "Keep an eye on these guys",
+          "review_text": "Great rock sound, and tight catchy tunes.",
+          "time_iso": "2002-10-16T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B00004NS0I::A3QDLGXVTTC7VS::945216000",
+        "_score": 10.522226,
+        "_source": {
+          "productId": "B00004NS0I",
+          "title": "Poverty & Riches \"EP\" (Remix)",
+          "price": null,
+          "userId": "A3QDLGXVTTC7VS",
+          "profileName": "michelle",
+          "helpfulness_raw": "4/4",
+          "score": 3.0,
+          "time": 945216000,
+          "summary_text": "Catchy",
+          "review_text": "Daforce you got some catchy tunes brotha.love ya michell",
+          "time_iso": "1999-12-15T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000J10KT6::A105R38CAPDBGU::1179014400",
+        "_score": 10.370018,
+        "_source": {
+          "productId": "B000J10KT6",
+          "title": "Begin to Hope",
+          "price": null,
+          "userId": "A105R38CAPDBGU",
+          "profileName": "Angelina Barlow",
+          "helpfulness_raw": "1/1",
+          "score": 4.0,
+          "time": 1179014400,
+          "summary_text": "Sassy and fun!",
+          "review_text": "Regina most certainly has tremendous spunk and a knack for catchy tunes.",
+          "time_iso": "2007-05-13T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B0001M7P78::unknown::1087171200",
+        "_score": 10.370018,
+        "_source": {
+          "productId": "B0001M7P78",
+          "title": "Good News for People Who Love Bad News",
+          "price": 6.99,
+          "userId": "unknown",
+          "profileName": "unknown",
+          "helpfulness_raw": "7/7",
+          "score": 5.0,
+          "time": 1087171200,
+          "summary_text": "Good Music",
+          "review_text": "Great CD with variety and catchy tunes. Keep up the good work!",
+          "time_iso": "2004-06-14T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000FFJ80S::A105R38CAPDBGU::1179014400",
+        "_score": 10.370018,
+        "_source": {
+          "productId": "B000FFJ80S",
+          "title": "Begin to Hope",
+          "price": 19.99,
+          "userId": "A105R38CAPDBGU",
+          "profileName": "Angelina Barlow",
+          "helpfulness_raw": "1/1",
+          "score": 4.0,
+          "time": 1179014400,
+          "summary_text": "Sassy and fun!",
+          "review_text": "Regina most certainly has tremendous spunk and a knack for catchy tunes.",
+          "time_iso": "2007-05-13T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B00005A09V::unknown::1021680000",
+        "_score": 10.320255,
+        "_source": {
+          "productId": "B00005A09V",
+          "title": "Dragon Tunes",
+          "price": null,
+          "userId": "unknown",
+          "profileName": "unknown",
+          "helpfulness_raw": "1/1",
+          "score": 5.0,
+          "time": 1021680000,
+          "summary_text": "My Kids love it!",
+          "review_text": "Highly recommended! It MAKES you dance! Very catchy tunes and alot of fun.",
+          "time_iso": "2002-05-18T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000069F0C::unknown::1037836800",
+        "_score": 10.320255,
+        "_source": {
+          "productId": "B000069F0C",
+          "title": "Let Go",
+          "price": null,
+          "userId": "unknown",
+          "profileName": "unknown",
+          "helpfulness_raw": "8/10",
+          "score": 5.0,
+          "time": 1037836800,
+          "summary_text": "Great for a first CD!",
+          "review_text": "Great job for a first CD. Very catchy tunes, and she's only 17!",
+          "time_iso": "2002-11-21T00:00:00Z",
+          "helpfulness": 0.8
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B0000DESZZ::unknown::1037836800",
+        "_score": 10.320255,
+        "_source": {
+          "productId": "B0000DESZZ",
+          "title": "Let Go",
+          "price": null,
+          "userId": "unknown",
+          "profileName": "unknown",
+          "helpfulness_raw": "8/10",
+          "score": 5.0,
+          "time": 1037836800,
+          "summary_text": "Great for a first CD!",
+          "review_text": "Great job for a first CD. Very catchy tunes, and she's only 17!",
+          "time_iso": "2002-11-21T00:00:00Z",
+          "helpfulness": 0.8
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B0001ME5LC::unknown::1037836800",
+        "_score": 10.320255,
+        "_source": {
+          "productId": "B0001ME5LC",
+          "title": "Let Go",
+          "price": null,
+          "userId": "unknown",
+          "profileName": "unknown",
+          "helpfulness_raw": "8/10",
+          "score": 5.0,
+          "time": 1037836800,
+          "summary_text": "Great for a first CD!",
+          "review_text": "Great job for a first CD. Very catchy tunes, and she's only 17!",
+          "time_iso": "2002-11-21T00:00:00Z",
+          "helpfulness": 0.8
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000PSHYJM::unknown::1037836800",
+        "_score": 10.320255,
+        "_source": {
+          "productId": "B000PSHYJM",
+          "title": "Let Go (Bonus CD)",
+          "price": 36.44,
+          "userId": "unknown",
+          "profileName": "unknown",
+          "helpfulness_raw": "8/10",
+          "score": 5.0,
+          "time": 1037836800,
+          "summary_text": "Great for a first CD!",
+          "review_text": "Great job for a first CD. Very catchy tunes, and she's only 17!",
+          "time_iso": "2002-11-21T00:00:00Z",
+          "helpfulness": 0.8
+        }
+      }
+    ]
+  }
+}
