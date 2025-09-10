@@ -88,3 +88,4 @@ if __name__ == "__main__":
               f"Total: {r[2]:6.2f}s | Hits: {r[3]:5} | Status: {r[4]}")
 
     print(f"\nAll queries executed. CSV report saved -> {CSV_REPORT}")
+    
