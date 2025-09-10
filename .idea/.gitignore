@@ -18,3 +18,7 @@ data/raw/
 queries_outputs/*.json
 # queries report
 queries_report.csv
+# scenarios outputs
+scenarios_outputs/per_request_logs/*.csv
+# scenarios report
+scenarios_outputs/*.csv
