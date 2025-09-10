@@ -14,3 +14,7 @@ data/raw/
 *.jsonl
 *.parquet
 *.tsv
+# query outputs
+queries_outputs/*.json
+# queries report
+queries_report.csv

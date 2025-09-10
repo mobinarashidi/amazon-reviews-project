@@ -1,91 +1,103 @@
 import os
 import json
-import time
 import csv
-from elasticsearch import Elasticsearch, exceptions
-from concurrent.futures import ProcessPoolExecutor, TimeoutError
+from pathlib import Path
+from elasticsearch import Elasticsearch
 
 # Config
 ES_URL = os.getenv("ELASTIC_URL", "http://localhost:9200")
-INDEX = os.getenv("INDEX_NAME", "amazon-music-reviews")
+INDEX_NAME = os.getenv("INDEX_NAME", "amazon-music-reviews")
+QUERY_DIR = os.getenv("QUERY_DIR", "queries")
+CSV_REPORT = os.getenv("CSV_REPORT", "queries_report.csv")
+OUT_DIR = os.getenv("OUT_DIR", "queries_outputs")
+REQUEST_TIMEOUT = float(os.getenv("REQUEST_TIMEOUT", "180"))
 
-QUERY_DIR = "queries"  # folder containing query JSON files
-OUTPUT_DIR = "queries_outputs" # folder to save results
-CSV_REPORT = "queries_report.csv" # Final report file
 
-TIMEOUT_PER_QUERY = 180  # Maximum allowed time per query
+# Convert json queries to dicts
+def load_json(p: Path):
+    with p.open("r", encoding="utf-8") as f:
+        return json.load(f)
 
-def run_query(fname):
-    # Connect to Elasticsearch
-    es = Elasticsearch(ES_URL)
 
-    # Load query from file
-    path = os.path.join(QUERY_DIR, fname)
-    with open(path, "r", encoding="utf-8") as f:
-        query = json.load(f)
+# Extract hits.total.value from response
+def total_hits_from(res_body: dict) -> int:
+    th = res_body.get("hits", {}).get("total", 0)
+    if isinstance(th, dict):
+        return int(th.get("value", 0))
+    return int(th or 0)
 
-    start_time = time.time()
+
+# Set query parameters for ElasticSearch client
+def build_kwargs(q: dict) -> dict:
+    kw = {}
+    if "query" in q:
+        kw["query"] = q["query"]
+    if "aggs" in q:
+        kw["aggs"] = q["aggs"]
+    if "size" in q:
+        kw["size"] = q["size"]
+    if "sort" in q:
+        kw["sort"] = q["sort"]
+    if "_source" in q:
+        kw["_source"] = q["_source"]
+    if "from" in q:
+        kw["from_"] = q["from"]  # ES Python client uses from_
+    kw["track_total_hits"] = q.get("track_total_hits", True)
+    return kw
+
+
+def main():
+    qdir = Path(QUERY_DIR)
+    outdir = Path(OUT_DIR)
+    outdir.mkdir(parents=True, exist_ok=True)
+    if not qdir.exists():
+        raise SystemExit(f"Query directory not found: {qdir.resolve()}")
+
+    # ES client with global timeout
+    es = Elasticsearch(ES_URL).options(request_timeout=REQUEST_TIMEOUT)
+
+    # Clear cache before running
     try:
-        # Execute the query
-        res = es.search(index=INDEX, body=query, request_timeout=TIMEOUT_PER_QUERY)
-        latency = time.time() - start_time # Time until response received
-
-        # Get response body
-        res_dict = res.body if hasattr(res, "body") else res
-
-        # Save result to output file
-        out_path = os.path.join(OUTPUT_DIR, fname.replace(".json", "_result.json"))
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(res_dict, f, ensure_ascii=False, indent=2)
-
-        total_time = time.time() - start_time # Total time including saving
-        hits = len(res_dict.get('hits', {}).get('hits', [])) # Number of results
-
-        status = "Success"
-        return fname, latency, total_time, hits, status
-
-    # Handle different types of errors
-    except (exceptions.ConnectionError, exceptions.ConnectionTimeout, exceptions.TransportError) as e:
-        total_time = time.time() - start_time
-        status = f"Failed-ES"
-        return fname, None, total_time, 0, status
-    except exceptions.BadRequestError as e:
-        total_time = time.time() - start_time
-        status = f"Failed-BadRequest"
-        return fname, None, total_time, 0, status
+        es.indices.clear_cache(index=INDEX_NAME)
+        print(f"Cleared cache for index: {INDEX_NAME}")
     except Exception as e:
-        total_time = time.time() - start_time
-        status = f"Failed-Other"
-        return fname, None, total_time, 0, status
+        print(f"WARNING: clear_cache failed: {type(e).__name__}: {e}")
+
+    qfiles = sorted(qdir.glob("*.json"))
+
+    with open(CSV_REPORT, "w", newline="", encoding="utf-8") as fcsv:
+        writer = csv.writer(fcsv)
+        writer.writerow(["Query", "Took(ms)", "TotalHits", "Status"])
+
+        for qp in qfiles:
+            took_ms, total_hits, status = "", "", "Success"
+            try:
+                # loading the query
+                q = load_json(qp)
+                # setting arguments
+                kwargs = build_kwargs(q)
+
+                # performing the query
+                res = es.search(index=INDEX_NAME, **kwargs)
+                res_body: dict = res.body
+
+                took_ms = res_body.get("took", "")
+                total_hits = total_hits_from(res_body)
+
+                # save raw response body
+                out_path = outdir / f"{qp.stem}_response.json"
+                with out_path.open("w", encoding="utf-8") as outf:
+                    json.dump(res_body, outf, ensure_ascii=False, indent=2)
+
+            except Exception as e:
+                status = f"{type(e).__name__}: {e}"
+
+            writer.writerow([qp.name, took_ms, total_hits, status])
+            print(f"{qp.name:35} | took={took_ms} ms | total hits={total_hits} | {status}")
+
+    print(f"\nSaved -> {CSV_REPORT}")
+    print(f"Raw responses -> {outdir}/")
 
 
 if __name__ == "__main__":
-    os.makedirs(OUTPUT_DIR, exist_ok=True) # Create output folder if not exists
-    results = []
-
-    # Run each query in a separate process
-    with ProcessPoolExecutor(max_workers=1) as executor:
-        for fname in os.listdir(QUERY_DIR):
-            if not fname.endswith(".json"):
-                continue
-            future = executor.submit(run_query, fname)
-            try:
-                result = future.result(timeout=TIMEOUT_PER_QUERY)
-            except TimeoutError:
-                result = (fname, None, TIMEOUT_PER_QUERY, 0, "Timeout")
-            results.append(result)
-
-    # Save results to CSV report
-    with open(CSV_REPORT, "w", newline="", encoding="utf-8") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["Query", "Latency(s)", "TotalTime(s)", "Hits", "Status"])
-        for r in results:
-            writer.writerow(r)
-
-    # Print
-    for r in results:
-        print(f"{r[0]:40} | Latency: {r[1] if r[1] is not None else '-':>6} | "
-              f"Total: {r[2]:6.2f}s | Hits: {r[3]:5} | Status: {r[4]}")
-
-    print(f"\nAll queries executed. CSV report saved -> {CSV_REPORT}")
-    
+    main()
