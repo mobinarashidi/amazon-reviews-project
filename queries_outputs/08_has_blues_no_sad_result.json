@@ -1,0 +1,239 @@
+{
+  "took": 13,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": 6.979048,
+    "hits": [
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B0001EMQNO::A2UO41KV1PS954::1143072000",
+        "_score": 6.979048,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B0001EMQNO",
+          "title": "Kings of the Blues",
+          "price": 12.61,
+          "userId": "A2UO41KV1PS954",
+          "profileName": "bestcdhead",
+          "helpfulness_raw": "0/0",
+          "score": 4.0,
+          "time": 1143072000,
+          "summary_text": "LIGHTNIN' HOPKINS - \"NOTHIN' BUT THE BLUES\"",
+          "review_text": "TRACK LISTING: Nothin' But The Blues / Sick Feelin' Blues / Blues For My Cookie / Big Black Cadillac Blues / Lightnin's Boogie / Early In The Mornin' Blues / Coffee House Blues / Fugitive Blues / G String Blues / Stool Pigeon Blues / Drinkin' In The Blues / Santa Fe BluesPLAYING TIME - 42:25",
+          "time_iso": "2006-03-23T00:00:00Z",
+          "helpfulness": null
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B0000DERAQ::A2AY315HLTXBU6::1280534400",
+        "_score": 6.888319,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B0000DERAQ",
+          "title": "Blind Lemon Jefferson",
+          "price": 13.89,
+          "userId": "A2AY315HLTXBU6",
+          "profileName": "Obmario \"Obmario\"",
+          "helpfulness_raw": "0/0",
+          "score": 4.0,
+          "time": 1280534400,
+          "summary_text": "Good CD by Blind Lemon",
+          "review_text": "A good CD; I just picked it up and am listening to it now. It is my first Blind Lemon. It is in the old school blues style -- a man and his guitar, much like Robert Johnson. So much better than the over produced stuff you often find these days.The tracks are Rambler Blues; See that My Grave is Kept Clean; Matchbox Blues; Hot dogs; Hangman's Blues; he Arose from the Dead; Blind Lemon's Penitentiary Blues; That Crawlin' Baby Blues; One Dime Blues; Rising High Water Blues; Rabbit Foot Blues; Prison Cell Blues; Lonesome House Blues; Where Shall I Be?; Lock Step Blues; Bad Luck Blues; Shuckin' Sugar Blues; Beggin' Back; Broke and Hungry; and Gone Dead on You Blues.",
+          "time_iso": "2010-07-31T00:00:00Z",
+          "helpfulness": null
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B00094OC6K::A3A5J3WPT2VUYM::1290556800",
+        "_score": 6.8529577,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B00094OC6K",
+          "title": "Blues Deluxe",
+          "price": 30.9,
+          "userId": "A3A5J3WPT2VUYM",
+          "profileName": "John",
+          "helpfulness_raw": "1/1",
+          "score": 5.0,
+          "time": 1290556800,
+          "summary_text": "ONE OF THE OUTSTANDING RECENT BLUES OR ROCK BLUES CDS!",
+          "review_text": "If I was to pick the very best recent rock blues cds that I have purchased and enjoyed (always a difficult proposition), I would definitely choose Joe Bonamassa's Blues Deluxe, along with Jimmy Thackery's Wild Night Out!, Eric Clapton's From The Cradle, Ronnie Earl's Deep Blues, and Stevie Ray Vaughan's In Step. Blues Deluxe seems all that more amazing because a following blues-tinged Joe Bonamassa cd, You and Me, is a big disapointment compared to the outstanding blues music, vocals, and guitar playing that are found on Blues Deluxe. I've listened to Blues Deluxe a large number of times, and the cd never fails to fascinate my rock blues and blues tastes. Every song on Blues Deluxe is outstanding blues. Joe Bonamassa does a superb job of singing and playing THE BLUES-Blues Deluxe is also among my most treasured blues cds! If you enjor blues and/or rock blues music, I very strongly and confidently recommend Blues Deluxe to you. The cd is so well done that I consider it a masterpiece.John",
+          "time_iso": "2010-11-24T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000026XJC::A2FWJ8NJKWJIKP::1103328000",
+        "_score": 6.8529577,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B000026XJC",
+          "title": "Pure Vintage Blues: Future Blues",
+          "price": null,
+          "userId": "A2FWJ8NJKWJIKP",
+          "profileName": "Slobberer \"Slobberer\"",
+          "helpfulness_raw": "4/6",
+          "score": 5.0,
+          "time": 1103328000,
+          "summary_text": "About this CD",
+          "review_text": "Pure Vintage Blues - \"Future Blues\"Empress (label) (U.K.) Catalogue # RAJCD 887over 65 minutes long...original recordings, tracks & artistsTracks:1. Dough Roller Blues - Arfield Akers (Vocal/Guitar)2. Future Blues - Willie Brown (Vocal/Guitar)3. Travelling Mama Blues - Joe Callicot (Vocal/Guitar)4. M And O Blues - Willie Brown (Vocal/Guitar)5. Mississippi Bottom Blues - Kid Bailey6. My Black Mama - Son House7. Cottonfield Blues - Garfield Akers (Vocal/Guitar) & Joe Callicot8. Rowdy Blues - Kid Bailey9. Sun Brimmers Blues - Memphis Jug Band10. Evil Woman Blues - James \"Boodle It\" Wiggins & Bob Call (Piano)11. Walking Blues - Raymond Barrow (Piano solo)12. Corrine, Corina Blues - James \"Boodle It\" Wiggins13. Gettin' Dirty Just Shakin' That Thing - Romeo Nelson14. Chain 'Em Down - Blind Leroy Garnett15. Kansas City Blues - Memphis Jug Band16. Louisiana Glide - Blind Leroy Garnett (piano)17. Good Looking Girl Blues - Furry Lewis (Vocal/Guitar)18. Peaches In The Springtime - Memphis Jug Band19. Dry Land Blues - Furry Lewis (Vocal/Guitar)20. Snitchin' Gambler Blues - Memphis Jug Band21. Head Rag Hop - Romeo Nelson (piano solo) Tampa Red (voice), Frankie Jaxon (Vocal interjections)22. Falling Down Blues - Furry Lewis",
+          "time_iso": "2004-12-18T00:00:00Z",
+          "helpfulness": 0.6666666666666666
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B00008FDKR::AKB5ZN0E6MTA2::1330992000",
+        "_score": 6.754326,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B00008FDKR",
+          "title": "The Super Super Blues Band [Vinyl]",
+          "price": null,
+          "userId": "AKB5ZN0E6MTA2",
+          "profileName": "PATRICK HAZELL",
+          "helpfulness_raw": "0/0",
+          "score": 5.0,
+          "time": 1330992000,
+          "summary_text": "Super Blues--in every way--a must have!",
+          "review_text": "Both the Super Blues, and the Super, Super Blues albums are essential for any blues collection. To say nothing of the number of blues super stars who perform on them (both the front men and the back line), the music is played without the restraints of the 3 minute limit common to the commercial releases of most of the all-time great blues hits. Live versions of blues songs often extend far beyond that time constraint. The Super Blues recordings are recorded live in the studio and definitely give the listener that live experience The Super Blues albums definitely groove. I could never understand the criticism these albums have received. Being a professional blues performer since 1961, I've played and heard a lot of blues both ancient and contemporary, and am fully aware of all the blues classic recordings. With that said, I feel the Super Blues albums are some of the best recordings of that era of blues spanning the mid 1950s-mid 1960s--a must have in any blues collection.Super Blues",
+          "time_iso": "2012-03-06T00:00:00Z",
+          "helpfulness": null
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000002O97::AKB5ZN0E6MTA2::1330992000",
+        "_score": 6.754326,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B000002O97",
+          "title": "Super Super Blues Band",
+          "price": null,
+          "userId": "AKB5ZN0E6MTA2",
+          "profileName": "PATRICK HAZELL",
+          "helpfulness_raw": "0/0",
+          "score": 5.0,
+          "time": 1330992000,
+          "summary_text": "Super Blues--in every way--a must have!",
+          "review_text": "Both the Super Blues, and the Super, Super Blues albums are essential for any blues collection. To say nothing of the number of blues super stars who perform on them (both the front men and the back line), the music is played without the restraints of the 3 minute limit common to the commercial releases of most of the all-time great blues hits. Live versions of blues songs often extend far beyond that time constraint. The Super Blues recordings are recorded live in the studio and definitely give the listener that live experience The Super Blues albums definitely groove. I could never understand the criticism these albums have received. Being a professional blues performer since 1961, I've played and heard a lot of blues both ancient and contemporary, and am fully aware of all the blues classic recordings. With that said, I feel the Super Blues albums are some of the best recordings of that era of blues spanning the mid 1950s-mid 1960s--a must have in any blues collection.Super Blues",
+          "time_iso": "2012-03-06T00:00:00Z",
+          "helpfulness": null
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000024P3A::AKB5ZN0E6MTA2::1330992000",
+        "_score": 6.754326,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B000024P3A",
+          "title": "Two Great Guitars/Super Super Blues Band",
+          "price": 17.05,
+          "userId": "AKB5ZN0E6MTA2",
+          "profileName": "PATRICK HAZELL",
+          "helpfulness_raw": "0/0",
+          "score": 5.0,
+          "time": 1330992000,
+          "summary_text": "Super Blues--in every way--a must have!",
+          "review_text": "Both the Super Blues, and the Super, Super Blues albums are essential for any blues collection. To say nothing of the number of blues super stars who perform on them (both the front men and the back line), the music is played without the restraints of the 3 minute limit common to the commercial releases of most of the all-time great blues hits. Live versions of blues songs often extend far beyond that time constraint. The Super Blues recordings are recorded live in the studio and definitely give the listener that live experience The Super Blues albums definitely groove. I could never understand the criticism these albums have received. Being a professional blues performer since 1961, I've played and heard a lot of blues both ancient and contemporary, and am fully aware of all the blues classic recordings. With that said, I feel the Super Blues albums are some of the best recordings of that era of blues spanning the mid 1950s-mid 1960s--a must have in any blues collection.Super Blues",
+          "time_iso": "2012-03-06T00:00:00Z",
+          "helpfulness": null
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B00000K49B::A2FWJ8NJKWJIKP::1102636800",
+        "_score": 6.754326,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B00000K49B",
+          "title": "Southern Blues V.1",
+          "price": null,
+          "userId": "A2FWJ8NJKWJIKP",
+          "profileName": "Slobberer \"Slobberer\"",
+          "helpfulness_raw": "7/7",
+          "score": 5.0,
+          "time": 1102636800,
+          "summary_text": "About this CD",
+          "review_text": "Southern Blues Volume 1Acrobat (U.K.)early country/pre-war acoustic blues from rare 78's....tracks & artists are1. I'm Leaving Town by William Harris2. Mistreatin' Blues by Frank Stokes3. Canned Heat Blues by Tommy Johnson4. Dry Land Blues by Furry Lewis5. Last Time Blues by Charlie McCoy6. Elder Greene Blues by Charley Patton7. Never Drive a Stranger from Your Door by Willie Harris8. Dough Roller Blues by Garfield Akers9. Beale Street Breakdown by Jed Davenport10. Skinny Legs Blues by Geeshie Wiley11. Stop and Listen by Mississippi Sheiks12. I Let My Daddy Do That by Hattie Hart13. Little Girl in Rome by Otto Virgial14. It's Cold in China Blues by Mississippi Moaner15. The Ins and Outs of My Girl by Bo Carter16. Skippy Whippy by Mississippi Jook Band17. Preachin' Blues by Robert Johnson -18. Lonesome World by McCoy, Robert Lee19. Spider Bite Blues by James DeBerry20. Special Streamline by Bukka White21. Jailhouse Blues by Estes, Sleepy John22. Mozelle Blues by Tommy McClennan23. Standin' at My Window by Arthur Crudup24. Anna Mae by Cecil Gant25. No Good Woman Blues by Rudy Greene",
+          "time_iso": "2004-12-10T00:00:00Z",
+          "helpfulness": 1.0
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000LCZEOY::A1CGLIDN7E5MK8::1164758400",
+        "_score": 6.725585,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B000LCZEOY",
+          "title": "The Blues Volume 1 Members Edition",
+          "price": null,
+          "userId": "A1CGLIDN7E5MK8",
+          "profileName": "InStockMedia.Net \"InStockMedia.Net\"",
+          "helpfulness_raw": "0/0",
+          "score": 5.0,
+          "time": 1164758400,
+          "summary_text": "Track Info on This Item",
+          "review_text": "Tracks:1. Dimples - John Lee Hooker2. Brown Skinned Women - Howlin' Wolf3. CC Rider - Leadbelly4. How Long Blues - Memphis Slim5. I Got a Right To Sing The Blues - Billie Holiday6. St. Louis Blues - Louis Armstrong7. Overhead Blues - Jack Dupree8. Have a Ball - Jimmy Witherspoon9. She's Mine, She's Yours - Jimmy Rushing10. Three Woman Blues - Memphis Slim11. Jinx Blues - Big Joe Williams12. Harmonica Hop - Sonny Terry13. Pratt City Blues - Jabo Williams14. Little School Girl - Smokey Hogg15. Everyday I Have the Blues - Lowell Fulson16. Out on a Limb - Roosevelt Sykes17. Mean Old Bedbug Blues - Bessie Smith18. Bring Me Lil Water Silvy - Leadbelly19. Billies Blues - Billie Holiday20. Baby Please Don't Go - Big Bill Broonzy",
+          "time_iso": "2006-11-29T00:00:00Z",
+          "helpfulness": null
+        }
+      },
+      {
+        "_index": "amazon-music-reviews",
+        "_id": "B000009OIX::A2KRYKKSJ8CUDT::1136505600",
+        "_score": 6.715351,
+        "_ignored": [
+          "review_text.keyword"
+        ],
+        "_source": {
+          "productId": "B000009OIX",
+          "title": "Come on In [Vinyl]",
+          "price": 7.99,
+          "userId": "A2KRYKKSJ8CUDT",
+          "profileName": "Mojo Marie",
+          "helpfulness_raw": "12/14",
+          "score": 5.0,
+          "time": 1136505600,
+          "summary_text": "Shuck Dub?",
+          "review_text": "Dear Mr. Yates: Are you one of those turtle-neck wearing folks with plenty of money and a nose in the air? Are you one of those that believe that the Blues must adhere to some unforgiving rules that you made up? Get off yo' high horse and put down that pipe! The Blues have always been a \"blasphemy\", a walk downtown, a soulful melody, a harsh reality.... etc... The Blues NEVER did adhere to any rules of musical education. The Blues is the Blues because of a feeling, an attitude. This album has all of that attitude, irreverent as it is. Take off that turtle-neck sweater and listen to these grooves. Blues grooves. The only other artist to take the Blues to this level this decade has been G. Love. No, it's not your daddy's Blues.... but it is Blues.... fun Blues.... New Orleans Blues... Blues the way it was supposed to be: Fun, Exciting, Soulful and NOT standard! Blues with a capital \"B\".",
+          "time_iso": "2006-01-06T00:00:00Z",
+          "helpfulness": 0.8571428571428571
+        }
+      }
+    ]
+  }
+}

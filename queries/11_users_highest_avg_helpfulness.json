@@ -3,7 +3,7 @@
   "aggs": {
     "users": {
       "terms": {
-        "field": "userId",
+        "field": "userId.keyword",
         "size": 10,
         "order": { "avg_help": "desc" }
       },

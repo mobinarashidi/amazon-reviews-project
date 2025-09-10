@@ -6,7 +6,7 @@
   "aggs": {
     "top_products": {
       "terms": {
-        "field": "productId",
+        "field": "productId.keyword",
         "size": 10,
         "order": { "_count": "desc" }
       }

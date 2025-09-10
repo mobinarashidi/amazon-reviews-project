@@ -1,0 +1,86 @@
+{
+  "took": 122153,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "top_terms": {
+      "doc_count": 2407842,
+      "bg_count": 43397410,
+      "buckets": [
+        {
+          "key": "in",
+          "doc_count": 1669373,
+          "score": 0.10867696649775374,
+          "bg_count": 26010523
+        },
+        {
+          "key": "with",
+          "doc_count": 1388210,
+          "score": 0.10836768557406638,
+          "bg_count": 21061439
+        },
+        {
+          "key": "as",
+          "doc_count": 1113314,
+          "score": 0.10279302846689717,
+          "bg_count": 16416078
+        },
+        {
+          "key": "on",
+          "doc_count": 1445574,
+          "score": 0.09210974162800276,
+          "bg_count": 22588489
+        },
+        {
+          "key": "that",
+          "doc_count": 1528688,
+          "score": 0.0897153548407683,
+          "bg_count": 24140746
+        },
+        {
+          "key": "from",
+          "doc_count": 979521,
+          "score": 0.08957451238631325,
+          "bg_count": 14468447
+        },
+        {
+          "key": "by",
+          "doc_count": 794257,
+          "score": 0.08759831274206369,
+          "bg_count": 11311342
+        },
+        {
+          "key": "for",
+          "doc_count": 1418038,
+          "score": 0.08751496466109855,
+          "bg_count": 22251250
+        },
+        {
+          "key": "an",
+          "doc_count": 807505,
+          "score": 0.08706432721750858,
+          "bg_count": 11554326
+        },
+        {
+          "key": "of",
+          "doc_count": 2074376,
+          "score": 0.08544982154735699,
+          "bg_count": 34013553
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "took": 24380,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "top_terms": {
+      "doc_count": 334527,
+      "bg_count": 43397410,
+      "buckets": [
+        {
+          "key": "worst",
+          "doc_count": 32439,
+          "score": 0.46700625048013644,
+          "bg_count": 723562
+        },
+        {
+          "key": "waste",
+          "doc_count": 22534,
+          "score": 0.4471367139322038,
+          "bg_count": 382732
+        },
+        {
+          "key": "money",
+          "doc_count": 46766,
+          "score": 0.399049260192951,
+          "bg_count": 1573971
+        },
+        {
+          "key": "horrible",
+          "doc_count": 18672,
+          "score": 0.31591105387089324,
+          "bg_count": 363713
+        },
+        {
+          "key": "garbage",
+          "doc_count": 17426,
+          "score": 0.3109309511671932,
+          "bg_count": 324387
+        },
+        {
+          "key": "terrible",
+          "doc_count": 16607,
+          "score": 0.24205150584597254,
+          "bg_count": 366653
+        },
+        {
+          "key": "crap",
+          "doc_count": 16694,
+          "score": 0.23950717210964914,
+          "bg_count": 373429
+        },
+        {
+          "key": "awful",
+          "doc_count": 15192,
+          "score": 0.23515275042645165,
+          "bg_count": 319004
+        },
+        {
+          "key": "sucks",
+          "doc_count": 11741,
+          "score": 0.18641441072892045,
+          "bg_count": 241332
+        },
+        {
+          "key": "worse",
+          "doc_count": 13215,
+          "score": 0.1519610477878603,
+          "bg_count": 353710
+        }
+      ]
+    }
+  }
+}
