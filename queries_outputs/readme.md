@@ -1,0 +1,1 @@
+# this directory is the place where the results of queries are stored

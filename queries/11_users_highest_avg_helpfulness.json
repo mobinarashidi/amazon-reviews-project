@@ -1,0 +1,15 @@
+{
+  "size": 0,
+  "aggs": {
+    "users": {
+      "terms": {
+        "field": "userId",
+        "size": 10,
+        "order": { "avg_help": "desc" }
+      },
+      "aggs": {
+        "avg_help": { "avg": { "field": "helpfulness" } }
+      }
+    }
+  }
+}
