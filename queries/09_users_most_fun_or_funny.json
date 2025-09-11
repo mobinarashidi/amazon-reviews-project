@@ -2,7 +2,7 @@
   "size": 0,
   "query": {
     "wildcard": {
-      "review_text": {
+      "review_text.keyword": {
         "value": "*fun*"
       }
     }

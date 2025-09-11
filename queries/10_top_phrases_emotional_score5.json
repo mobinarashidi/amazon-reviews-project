@@ -12,10 +12,11 @@
   },
   "aggs": {
     "top_phrases": {
-      "significant_text": {
-        "field": "review_text.shingles",
+      "terms": {
+        "field": "review_text.shingles.keyword",
         "size": 10
       }
     }
   }
 }
+

@@ -5,8 +5,8 @@
   },
   "aggs": {
     "top_terms": {
-      "significant_text": {
-        "field": "review_text",
+      "terms": {
+        "field": "review_text.keyword",
         "size": 10
       }
     }

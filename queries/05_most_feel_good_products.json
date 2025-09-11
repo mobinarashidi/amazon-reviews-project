@@ -1,7 +1,7 @@
 {
   "size": 0,
   "query": {
-    "match_phrase": { "review_text": "feel good" }
+    "match_phrase": { "review_text.shingles": "feel good" }
   },
   "aggs": {
     "top_products": {

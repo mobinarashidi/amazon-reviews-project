@@ -5,7 +5,7 @@
         { "range": { "helpfulness": { "gt": 0.75 } } }
       ],
       "must": [
-        { "match_phrase": { "review_text": "catchy tunes" } }
+        { "match_phrase": { "review_text.shingles": "catchy tunes" } }
       ]
     }
   }
