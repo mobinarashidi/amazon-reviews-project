@@ -82,7 +82,111 @@ https://localhost:9200
 ```
 
 ---
-### Step 2: Preprocess the Dataset and Ingest Data 
+### Step 2: Indexing Data
+
+This step defines how we structure and optimize the indexing of Amazon Music review data in Elasticsearch using Kibana Dev Tools.
+
+#### Initial Index Template (Before Optimization)
+```bash
+PUT _index_template/amazon-reviews-template
+{
+  "index_patterns": ["amazon-music-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "productId": { "type": "keyword" },
+        "userId": { "type": "keyword" },
+        "score": { "type": "float" },
+        "helpfulness": { "type": "float" },
+        "time": { "type": "long" },
+        "summary_text": { "type": "text" },
+        "review_text": { "type": "text" }
+      }
+    }
+  }
+}
+
+```
+To improve search capabilities, we delete the existing index and redefine the template with enhanced analysis:
+```bash
+DELETE amazon-music-reviews
+```
+#### Optimized Index Template (After)
+The updated template introduces:
+
+- A custom shingle analyzer for phrase-based search and similarity matching
+
+- Multi-field mappings for summary_text and review_text, including:
+
+     - keyword for exact match filtering
+
+     - shingles for advanced text analysis
+```bash
+PUT _index_template/amazon-reviews-template
+{
+  "index_patterns": ["amazon-music-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
+      "analysis": {
+        "analyzer": {
+          "shingle_analyzer": {
+            "type": "custom",
+            "tokenizer": "standard",
+            "filter": ["lowercase", "shingle"]
+          }
+        }
+      }
+    },
+    "mappings": {
+      "properties": {
+        "productId": {
+          "type": "keyword"
+        },
+        "userId": {
+          "type": "keyword"
+        },
+        "score": {
+          "type": "float"
+        },
+        "helpfulness": {
+          "type": "float"
+        },
+        "time": {
+          "type": "long"
+        },
+        "summary_text": {
+          "type": "text",
+          "fields": {
+            "keyword": { "type": "keyword" }
+          }
+        },
+        "review_text": {
+          "type": "text",
+          "fields": {
+            "keyword": { "type": "keyword" },
+            "shingles": {
+              "type": "text",
+              "analyzer": "shingle_analyzer"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+```
+
+
+---
+### Step 3: Preprocess the Dataset and Ingest  
 
 Use the ingestion script to push data into elastic:
 
@@ -90,10 +194,9 @@ Use the ingestion script to push data into elastic:
 python ingest/stream_ingest.py --dataset data/raw/Music.txt --index amazon-music-reviews
 ```
 
-
 ##  Query Execution
 
-###  Step 3: Run Queries
+###  Step 4: Run Queries
 
 Execute predefined queries on the dataset:
 
@@ -105,7 +208,7 @@ python run_queries.py
 
 ##  Performance Benchmarking
 
-###  Step 4: Run Benchmarks
+###  Step 5: Run Benchmarks
 
 Run performance benchmarks:
 
