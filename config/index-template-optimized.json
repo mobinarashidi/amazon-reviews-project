@@ -1,0 +1,53 @@
+{
+  "index_patterns": ["amazon-music-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
+      "analysis": {
+        "analyzer": {
+          "shingle_analyzer": {
+            "type": "custom",
+            "tokenizer": "standard",
+            "filter": ["lowercase", "shingle"]
+          }
+        }
+      }
+    },
+    "mappings": {
+      "properties": {
+        "productId": {
+          "type": "keyword"
+        },
+        "userId": {
+          "type": "keyword"
+        },
+        "score": {
+          "type": "float"
+        },
+        "helpfulness": {
+          "type": "float"
+        },
+        "time": {
+          "type": "long"
+        },
+        "summary_text": {
+          "type": "text",
+          "fields": {
+            "keyword": { "type": "keyword" }
+          }
+        },
+        "review_text": {
+          "type": "text",
+          "fields": {
+            "keyword": { "type": "keyword" },
+            "shingles": {
+              "type": "text",
+              "analyzer": "shingle_analyzer"
+            }
+          }
+        }
+      }
+    }
+  }
+}
