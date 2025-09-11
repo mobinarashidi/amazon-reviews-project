@@ -87,7 +87,7 @@ https://localhost:9200
 Use the ingestion script to push data into elastic:
 
 ```bash
-python ingest.py --dataset_name <dataset_name> --index_name <index_name>
+python ingest/stream_ingest.py --dataset data/raw/Music.txt --index amazon-music-reviews
 ```
 
 
@@ -98,7 +98,7 @@ python ingest.py --dataset_name <dataset_name> --index_name <index_name>
 Execute predefined queries on the dataset:
 
 ```bash
-python ingest/stream_ingest.py --dataset data/raw/Music.txt --index amazon-music-reviews
+python run_queries.py
 ```
 
 ---
@@ -121,3 +121,5 @@ Mobina Rashidi (401170564)
 
 
 Farbod Fattahi (402106231)
+
+Arian Afzalzade (401105572)
