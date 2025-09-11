@@ -93,7 +93,7 @@ python ingest/stream_ingest.py --dataset data/raw/Music.txt --index amazon-music
 
 ##  Query Execution
 
-###  Step 4: Run Queries
+###  Step 3: Run Queries
 
 Execute predefined queries on the dataset:
 
@@ -105,7 +105,7 @@ python run_queries.py
 
 ##  Performance Benchmarking
 
-###  Step 5: Run Benchmarks
+###  Step 4: Run Benchmarks
 
 Run performance benchmarks:
 
@@ -118,7 +118,6 @@ load_scenarios.py
 ## Authors:
 
 Mobina Rashidi (401170564)
-
 
 Farbod Fattahi (402106231)
 
